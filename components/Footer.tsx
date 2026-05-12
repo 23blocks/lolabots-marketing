@@ -122,7 +122,7 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-cream-darker">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 text-xs text-muted">
+        <div className="mx-auto flex max-w-6xl flex-col-reverse gap-2 px-6 py-4 text-xs text-muted sm:flex-row sm:items-center sm:justify-between sm:gap-4">
           <span>© {year} Lolabots. All rights reserved.</span>
           <span>Made for the rest of us.</span>
         </div>
