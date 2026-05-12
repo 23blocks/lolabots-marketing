@@ -1,0 +1,8 @@
+# Cloudflare Pages security headers.
+# Next.js's headers() doesn't apply on static export — these are the source of truth in prod.
+
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()

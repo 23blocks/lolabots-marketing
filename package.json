@@ -1,0 +1,32 @@
+{
+  "name": "lolabots-marketing",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Lolabots — practical AI agents you actually use. Marketing site, brand hub, blog.",
+  "scripts": {
+    "dev": "next dev --port 3001",
+    "build": "next build",
+    "build:static": "STATIC_EXPORT=1 next build",
+    "start": "next start --port 3001",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "lucide-react": "^0.468.0",
+    "next": "^16.2.4",
+    "next-mdx-remote": "^5.0.0",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "remark-gfm": "^4.0.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.19",
+    "@types/node": "^25.6.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^6.0.3"
+  }
+}
