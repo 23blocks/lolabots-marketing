@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowRight, Check } from 'lucide-react'
+import { factoryUrl } from '@/lib/factory'
 
 export const dynamic = 'force-static'
 
@@ -49,14 +50,14 @@ export default function ProductsPage() {
         </ul>
         <div className="flex flex-wrap items-center gap-3">
           <a
-            href="https://factory.lolabots.com"
+            href={factoryUrl('products-page')}
             className="group inline-flex items-center gap-2 rounded-md bg-tangerine px-5 py-3 text-sm font-semibold text-cream transition-colors hover:bg-tangerine-dark"
           >
             Open Factory
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </a>
           <a
-            href="https://factory.lolabots.com/how-it-works"
+            href={factoryUrl('products-page', '/how-it-works')}
             className="inline-flex items-center rounded-md border border-cream-darker px-4 py-3 text-sm font-semibold text-ink transition-colors hover:border-ink"
           >
             How it works

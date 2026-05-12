@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { ArrowRight, Sparkles, Zap, Shield, Heart } from 'lucide-react'
 import FactoryCta from '@/components/FactoryCta'
+import { factoryUrl } from '@/lib/factory'
 
 export const dynamic = 'force-static'
 
@@ -99,7 +100,7 @@ export default function HomePage() {
           <div className="grid gap-5 lg:grid-cols-2">
             {/* Factory — shipped */}
             <a
-              href="https://factory.lolabots.com"
+              href={factoryUrl('products-tile')}
               className="group relative overflow-hidden rounded-2xl border border-cream-darker bg-cream p-8 transition-colors hover:border-tangerine/40"
             >
               <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-tangerine-light px-3 py-1 text-xs font-semibold uppercase tracking-wider text-tangerine-dark">
