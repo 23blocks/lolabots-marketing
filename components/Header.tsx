@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import { trackEvent } from '@/lib/gtm'
+import { factoryUrl } from '@/lib/factory'
 
 const NAV_LINKS = [
   { href: '/products', label: 'Products' },
@@ -72,7 +73,7 @@ export default function Header() {
               </Link>
             ))}
             <a
-              href="https://factory.lolabots.com"
+              href={factoryUrl('header')}
               onClick={() =>
                 trackEvent('factory_cta_clicked', {
                   surface: 'header',
@@ -153,7 +154,7 @@ export default function Header() {
 
             <div className="border-t border-cream-darker p-4">
               <a
-                href="https://factory.lolabots.com"
+                href={factoryUrl('mobile-menu')}
                 onClick={() => {
                   trackEvent('factory_cta_clicked', {
                     surface: 'mobile-menu',
