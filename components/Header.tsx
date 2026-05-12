@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
 import { Menu, X } from 'lucide-react'
+import { trackEvent } from '@/lib/gtm'
 
 const NAV_LINKS = [
   { href: '/products', label: 'Products' },
@@ -58,6 +59,13 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
+                onClick={() =>
+                  trackEvent('nav_clicked', {
+                    link_label: link.label,
+                    link_href: link.href,
+                    surface: 'header-desktop',
+                  })
+                }
                 className="rounded-md px-3 py-2 text-sm font-medium text-ink-light transition-colors hover:text-ink"
               >
                 {link.label}
@@ -65,6 +73,12 @@ export default function Header() {
             ))}
             <a
               href="https://factory.lolabots.com"
+              onClick={() =>
+                trackEvent('factory_cta_clicked', {
+                  surface: 'header',
+                  link_label: 'Open Factory',
+                })
+              }
               className="ml-2 rounded-md bg-ink px-4 py-2 text-sm font-semibold text-cream transition-colors hover:bg-ink-light"
             >
               Open Factory
@@ -120,7 +134,14 @@ export default function Header() {
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      onClick={() => setOpen(false)}
+                      onClick={() => {
+                        trackEvent('nav_clicked', {
+                          link_label: link.label,
+                          link_href: link.href,
+                          surface: 'mobile-menu',
+                        })
+                        setOpen(false)
+                      }}
                       className="flex min-h-[44px] items-center rounded-md px-3 py-3 text-base font-medium text-ink transition-colors hover:bg-cream-dark"
                     >
                       {link.label}
@@ -133,7 +154,13 @@ export default function Header() {
             <div className="border-t border-cream-darker p-4">
               <a
                 href="https://factory.lolabots.com"
-                onClick={() => setOpen(false)}
+                onClick={() => {
+                  trackEvent('factory_cta_clicked', {
+                    surface: 'mobile-menu',
+                    link_label: 'Open Factory',
+                  })
+                  setOpen(false)
+                }}
                 className="flex min-h-[48px] w-full items-center justify-center rounded-md bg-ink px-5 py-3 text-base font-semibold text-cream transition-colors hover:bg-ink-light"
               >
                 Open Factory
