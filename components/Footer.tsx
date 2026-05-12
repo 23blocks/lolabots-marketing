@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { factoryUrl } from '@/lib/factory'
 
 export default function Footer() {
   const year = new Date().getFullYear()
@@ -70,7 +71,7 @@ export default function Footer() {
           <ul className="space-y-2 text-sm">
             <li>
               <a
-                href="https://factory.lolabots.com"
+                href={factoryUrl('footer')}
                 className="text-ink-light transition-colors hover:text-ink"
               >
                 Lolabot Factory

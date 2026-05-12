@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { factoryUrl } from '@/lib/factory'
 
 export default function NotFound() {
   return (
@@ -21,7 +22,7 @@ export default function NotFound() {
           Back to home
         </Link>
         <a
-          href="https://factory.lolabots.com"
+          href={factoryUrl('not-found')}
           className="inline-flex items-center rounded-md border border-cream-darker px-5 py-3 text-sm font-semibold text-ink hover:border-ink"
         >
           Open Lolabot Factory
