@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { ArrowRight, Sparkles, Zap, Shield, Heart } from 'lucide-react'
+import FactoryCta from '@/components/FactoryCta'
 
 export const dynamic = 'force-static'
 
@@ -23,17 +24,15 @@ export default function HomePage() {
               configs. Pick a specialist, paste one command, and your agent goes to work
               in the tool you already use.
             </p>
-            <div className="mt-10 flex flex-wrap items-center gap-3">
-              <a
-                href="https://factory.lolabots.com"
-                className="group inline-flex items-center gap-2.5 rounded-md bg-tangerine px-6 py-3.5 font-display text-base font-800 uppercase tracking-wide text-cream transition-colors hover:bg-tangerine-dark sm:px-8 sm:py-4"
-              >
-                Build your first agent
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </a>
+            <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+              <FactoryCta
+                surface="hero"
+                label="Build your first agent"
+                className="group inline-flex min-h-[52px] items-center justify-center gap-2.5 rounded-md bg-tangerine px-6 py-3.5 font-display text-base font-800 uppercase tracking-wide text-cream transition-colors hover:bg-tangerine-dark sm:justify-start sm:px-8 sm:py-4"
+              />
               <Link
                 href="/products"
-                className="inline-flex items-center rounded-md border border-cream-darker px-5 py-3.5 text-sm font-semibold text-ink transition-colors hover:border-ink"
+                className="inline-flex min-h-[52px] items-center justify-center rounded-md border border-cream-darker px-5 py-3.5 text-sm font-semibold text-ink transition-colors hover:border-ink sm:justify-start"
               >
                 See what we ship
               </Link>
@@ -159,13 +158,11 @@ export default function HomePage() {
               Open the factory, pick a personality, equip it with skills, and get a
               one-liner install. 60 seconds, no signup, no credit card.
             </p>
-            <a
-              href="https://factory.lolabots.com"
+            <FactoryCta
+              surface="bottom-cta"
+              label="Open Lolabot Factory"
               className="group mt-8 inline-flex items-center gap-2.5 rounded-md bg-tangerine px-8 py-4 font-display text-base font-800 uppercase tracking-wide text-cream transition-colors hover:bg-tangerine-dark"
-            >
-              Open Lolabot Factory
-              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </a>
+            />
           </div>
         </div>
       </section>

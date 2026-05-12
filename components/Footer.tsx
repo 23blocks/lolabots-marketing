@@ -14,16 +14,53 @@ export default function Footer() {
               Lolabots
             </span>
           </div>
-          <p className="text-sm leading-relaxed text-ink-light">
-            Practical AI agents you actually use. Built by{' '}
-            <a
-              href="https://23blocks.com"
-              className="font-medium text-ink underline decoration-ink/20 underline-offset-2 hover:text-tangerine"
-            >
-              23blocks
-            </a>
-            .
+          <p className="mb-4 text-sm leading-relaxed text-ink-light">
+            Practical AI agents you actually use.
           </p>
+          <ul className="space-y-1.5 text-sm text-ink-light">
+            <li>
+              Built by{' '}
+              <a
+                href="https://github.com/jpelaez-23blocks"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-ink underline decoration-ink/20 underline-offset-2 hover:text-tangerine"
+              >
+                Juan Peláez
+              </a>{' '}
+              @{' '}
+              <a
+                href="https://23blocks.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-ink underline decoration-ink/20 underline-offset-2 hover:text-tangerine"
+              >
+                23blocks
+              </a>
+            </li>
+            <li>
+              Made with <span className="text-tangerine">♥</span> in{' '}
+              <a
+                href="https://en.wikipedia.org/wiki/Boulder,_Colorado"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-ink underline decoration-ink/20 underline-offset-2 hover:text-tangerine"
+              >
+                Boulder, Colorado
+              </a>
+            </li>
+            <li>
+              Coded with{' '}
+              <a
+                href="https://claude.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-ink underline decoration-ink/20 underline-offset-2 hover:text-tangerine"
+              >
+                Claude
+              </a>
+            </li>
+          </ul>
         </div>
 
         <div>
@@ -85,7 +122,7 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-cream-darker">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 text-xs text-muted">
+        <div className="mx-auto flex max-w-6xl flex-col-reverse gap-2 px-6 py-4 text-xs text-muted sm:flex-row sm:items-center sm:justify-between sm:gap-4">
           <span>© {year} Lolabots. All rights reserved.</span>
           <span>Made for the rest of us.</span>
         </div>

@@ -5,6 +5,7 @@ import { ArrowLeft } from 'lucide-react'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import remarkGfm from 'remark-gfm'
 import { getAllPosts, getPost, formatPostDate } from '@/lib/blog'
+import BlogPostViewTracker from '@/components/BlogPostViewTracker'
 
 export const dynamic = 'force-static'
 
@@ -41,6 +42,7 @@ export default async function BlogPostPage({ params }: PageProps) {
 
   return (
     <article className="mx-auto max-w-3xl px-6 py-16 sm:py-24">
+      <BlogPostViewTracker postSlug={post.slug} postTitle={post.title} />
       <Link
         href="/blog"
         className="group inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-muted hover:text-ink"
