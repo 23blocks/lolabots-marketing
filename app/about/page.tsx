@@ -6,7 +6,10 @@ export const metadata: Metadata = {
   title: 'About',
   description:
     'Lolabots is built by 23blocks. The thesis: AI agents should work for everyone, not just engineering teams.',
-  alternates: { canonical: '/about' },
+  alternates: {
+    canonical: '/about',
+    types: { 'text/markdown': '/about.md' },
+  },
 }
 
 export default function AboutPage() {

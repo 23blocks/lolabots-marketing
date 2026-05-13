@@ -9,7 +9,10 @@ export const metadata: Metadata = {
   title: 'Blog',
   description:
     'Notes from the Lolabots team: product launches, why we build the way we build, and what we&rsquo;re learning about practical AI.',
-  alternates: { canonical: '/blog' },
+  alternates: {
+    canonical: '/blog',
+    types: { 'text/markdown': '/blog.md' },
+  },
 }
 
 export default function BlogIndexPage() {
