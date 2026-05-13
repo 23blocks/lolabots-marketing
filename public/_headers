@@ -6,3 +6,11 @@
   X-Frame-Options: SAMEORIGIN
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+# Agent-readiness: serve hand-curated .md surfaces as markdown rather than
+# Cloudflare's default text/plain. See F-006.
+/*.md
+  Content-Type: text/markdown; charset=utf-8
+
+/blog/*.md
+  Content-Type: text/markdown; charset=utf-8
