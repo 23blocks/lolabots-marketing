@@ -1,0 +1,13 @@
+# Lolabots — robots.txt
+# Cloudflare Pages serves this file as-is. Switched from a dynamic app/robots.ts
+# in F-007 so we can include the `Llms:` advisory line below.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://lolabots.com/sitemap.xml
+
+# Agent discovery (F-007). Per https://llmstxt.org, /llms.txt is the canonical
+# entry point for AI agents reading this site. Agent crawlers that don't yet
+# check /llms.txt by default can find it from here.
+Llms: https://lolabots.com/llms.txt

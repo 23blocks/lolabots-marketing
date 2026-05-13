@@ -8,7 +8,10 @@ export const metadata: Metadata = {
   title: 'For Agents',
   description:
     'Every agent-facing surface across the Lolabots brand: markdown editions of every page, the llms.txt index, and links to factory.lolabots.com programmatic endpoints.',
-  alternates: { canonical: '/for-agents' },
+  alternates: {
+    canonical: '/for-agents',
+    types: { 'text/markdown': '/for-agents.md' },
+  },
 }
 
 export default function ForAgentsPage() {
