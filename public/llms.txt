@@ -1,0 +1,28 @@
+# Lolabots
+
+> Lolabots makes practical AI agents that work for people, not engineering teams. Pick a specialist, paste one command, your agent goes to work in the tool you already use.
+
+Lolabots is the umbrella brand. Our first product is Lolabot Factory — pick from 314 AI specialist personalities across 18 divisions, equip them with skills from Anthropic, Vercel, Google, Cloudflare, gstack and more, and install with one command in Claude Code, Cursor, ChatGPT, Custom GPTs, OpenAI Assistants, or any tool that takes a system prompt.
+
+This file follows the proposed standard at https://llmstxt.org — an index of where AI agents should look for machine-readable context about the brand.
+
+## Pages
+
+- [Home (agent edition)](https://lolabots.com/index.md): what Lolabots is, the thesis, our products
+- [Products](https://lolabots.com/products.md): the current product line — Factory available now, more in stealth
+- [About](https://lolabots.com/about.md): the thesis behind the brand
+- [For agents](https://lolabots.com/for-agents.md): index of every agent-facing surface across the brand
+- [Blog](https://lolabots.com/blog.md): index of posts
+
+## Lolabot Factory (the product)
+
+- [Factory llms.txt](https://factory.lolabots.com/llms.txt): factory's own agent surface index
+- [Factory for-agents](https://factory.lolabots.com/for-agents.md): how to invoke factory programmatically
+- [Factory install endpoint](https://api.lolabots.com/api/install/{personality-id}): `GET` returns a one-line bash install script for a given personality
+- [Factory build API](https://api.lolabots.com/api/build): `POST` builds a plugin zip for Claude Code / Cursor / etc.
+- [Personality catalog](https://api.lolabots.com/api/personalities): `GET` returns the JSON catalog of available specialists
+
+## Blog
+
+- [Blog index](https://lolabots.com/blog.md): summary of posts
+- [Welcome to Lolabots](https://lolabots.com/blog/welcome-to-lolabots.md): why we're building practical AI agents for non-engineers

@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next dev --port 3001",
     "build": "next build",
-    "build:static": "STATIC_EXPORT=1 next build",
+    "build:static": "STATIC_EXPORT=1 next build && node scripts/build-agent-md.mjs",
     "start": "next start --port 3001",
     "lint": "next lint"
   },
