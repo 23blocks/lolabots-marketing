@@ -15,6 +15,7 @@ Every backlog row is labelled with a category so the work scope reads at a glanc
 | `factory`      | Anything that touches factory.lolabots.com from this site (deep-links, UTM tagging, cross-domain UX) |
 | `ops`          | Deploy pipelines, secrets, infrastructure, repo hygiene |
 | `brand`        | Cross-product brand stuff — logos, messaging, parent-brand affordances |
+| `agent`        | Surfaces designed for AI agents to consume — `llms.txt`, markdown pages, `/for-agents` discovery, MCP servers |
 
 Status definitions:
 - **Now** — actively being worked on
@@ -27,7 +28,9 @@ Status definitions:
 
 ## Now
 
-_(empty)_
+| ID    | Category | Feature                                  | One-liner                                                                                                          | Doc |
+|-------|----------|------------------------------------------|--------------------------------------------------------------------------------------------------------------------|-----|
+| F-006 | agent    | Agent readiness — markdown + /for-agents | `/llms.txt`, hand-curated `.md` versions of every page, plus a `/for-agents` discovery page. Static-only, no Worker. | [docs/features/agent-readiness.md](docs/features/agent-readiness.md) |
 
 ## Next
 
