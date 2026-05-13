@@ -9,7 +9,10 @@ export const metadata: Metadata = {
   title: 'Products',
   description:
     'The Lolabots product line. Factory is product one — practical AI agents you actually use. More products in stealth.',
-  alternates: { canonical: '/products' },
+  alternates: {
+    canonical: '/products',
+    types: { 'text/markdown': '/products.md' },
+  },
 }
 
 export default function ProductsPage() {

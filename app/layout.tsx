@@ -17,7 +17,13 @@ export const metadata: Metadata = {
     'Lolabots builds practical AI tools for people, not engineering teams. Pick a specialist, paste one command, and your agent goes to work.',
   applicationName: 'Lolabots',
   authors: [{ name: '23blocks' }],
-  alternates: { canonical: '/' },
+  alternates: {
+    canonical: '/',
+    // F-007: HTML pages declare their hand-curated markdown sibling via
+    // rel=alternate. Page-level metadata overrides this default; pages
+    // without a .md sibling can drop the types: entry.
+    types: { 'text/markdown': '/index.md' },
+  },
   openGraph: {
     type: 'website',
     siteName: 'Lolabots',
