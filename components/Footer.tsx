@@ -100,6 +100,11 @@ export default function Footer() {
                 About
               </Link>
             </li>
+            <li>
+              <Link href="/for-agents" className="text-ink-light transition-colors hover:text-ink">
+                For agents
+              </Link>
+            </li>
           </ul>
         </div>
 
