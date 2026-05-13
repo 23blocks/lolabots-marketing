@@ -25,7 +25,7 @@ Within one slice:
 
 1. `/llms.txt` at the root of lolabots.com (per <https://llmstxt.org>) — an index of where agents should look for machine-readable context about the brand and its products
 2. A `.md` version of every public page (`/`, `/products`, `/about`, `/blog`, every blog post), served at the same URL with `.md` appended (`/products.md`, `/blog/welcome-to-lolabots.md`). Same content, written for agents — no chrome, no marketing fluff, opinionated about what we recommend.
-3. A new `/for-agents` page (and `/for-agents.md`) — discoverability surface that lists every agent-facing asset across the brand: factory's install endpoint, build API, skills catalog, the `llms.txt`, the markdown pages, and the upcoming MCP server placeholder.
+3. A new `/for-agents` page (and `/for-agents.md`) — discoverability surface that lists every agent-facing asset across the brand: factory's install endpoint, build API, skills catalog, the `llms.txt`, and the markdown pages.
 
 ## Scope
 
@@ -39,7 +39,7 @@ Within one slice:
 
 **Out (explicitly):**
 - Cloudflare Worker for content negotiation — user requested no Worker complexity. We rely on explicit `.md` URLs, advertised in `llms.txt`. Agents that respect `llms.txt` will find them.
-- MCP server for the marketing site — nothing to expose programmatically here yet. The MCP belongs to factory (separate F-030 feature doc).
+- MCP server — out forever, not deferred. Lolabots will not ship an MCP server at the marketing site or the product layer (see saved feedback rule). If an agent built with factory needs MCP for its work, that's a per-agent runtime concern.
 - Auto-generation of markdown from MDX/JSX. Hand-curated keeps quality high and forces us to write for the agent reader, not just dump HTML-as-text.
 - A `robots.txt` change. Current rules already allow crawling.
 
