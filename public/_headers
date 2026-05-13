@@ -14,3 +14,9 @@
 
 /blog/*.md
   Content-Type: text/markdown; charset=utf-8
+
+# llms.txt is markdown-formatted per https://llmstxt.org. The spec calls for
+# `Content-Type: text/markdown; charset=utf-8`. Cloudflare otherwise serves
+# .txt as text/plain.
+/llms.txt
+  Content-Type: text/markdown; charset=utf-8
